@@ -77,7 +77,7 @@ if streamlit.button('Add a fruit to List'):
     my_cnx.close()
     streamlit.write(back_from_function)
 
-import snowflake.connector
+#import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
